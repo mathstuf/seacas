@@ -289,6 +289,7 @@ configure_file(
 set(headers
   include/exodusII.h
   include/exodusII_int.h
+  include/vtk_exodusII_mangle.h
   "${CMAKE_CURRENT_BINARY_DIR}/include/exodus_config.h")
 
 vtk_module_add_module(VTK::exodusII
