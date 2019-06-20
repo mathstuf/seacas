@@ -46,13 +46,15 @@
 #include "exodusII_cfg.h"
 #include "vtk_exodusII_mangle.h"
 
-#include "netcdf.h"
+#include "vtk_netcdf.h"
 
+#if VTK_MODULE_USE_EXTERNAL_vtknetcdf
 #if defined(NC_HAVE_META_H)
 #include "netcdf_meta.h"
 #if NC_HAS_PARALLEL
 #ifndef PARALLEL_AWARE_EXODUS
 #define PARALLEL_AWARE_EXODUS
+#endif
 #endif
 #endif
 #endif

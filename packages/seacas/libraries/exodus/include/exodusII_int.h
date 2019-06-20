@@ -47,9 +47,11 @@
 #include <pthread.h>
 #endif
 
-#include "netcdf.h"
+#include "vtk_netcdf.h"
+#if VTK_MODULE_USE_EXTERNAL_vtknetcdf
 #if defined(NC_HAVE_META_H)
 #include "netcdf_meta.h"
+#endif
 #endif
 
 #if defined(_WIN32) && defined(_MSC_VER) && _MSC_VER < 1900
